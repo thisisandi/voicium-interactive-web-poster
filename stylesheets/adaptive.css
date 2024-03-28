@@ -1,0 +1,154 @@
+@media all and (orientation: portrait){
+    body{
+      width: 100%;
+      overflow: hidden;
+    }
+    .rotatee{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .pageFirst{
+        display: none;
+    }
+    .pageDraw{
+        display: none;
+    }
+    .pageRecord{
+        display: none;
+    }
+    .pageListen{
+        display: none;
+    }
+    .pageWrite{
+        display: none;
+    } 
+}
+
+@media all and (orientation: landscape){
+    .rotatee{
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+   .video-container1 {
+    position: absolute;
+    top: 50vw;
+    left: 80vw;
+}
+
+.video-container2 {
+    position: absolute;
+    top: 3vw;
+    left: 45vw;
+}
+
+.video-container3 {
+    position: absolute;
+    top: 22vw;
+    left: 52vw;
+}
+
+.video-container4 {
+    position: absolute;
+    top: 3vw;
+    left: 25vw;
+}
+
+.video-container5 {
+    position: absolute;
+    top: 40vw;
+    left: 5vw;
+}
+
+.video-container6 {
+    position: absolute;
+    top: 30vw;
+    left: 72vw;
+}
+
+.video-container7 {
+    position: absolute;
+    top: 45vw;
+    left: 25vw;
+}
+
+.video-container8 {
+    position: absolute;
+    top: 45vw;
+    left: 60vw;
+}
+
+.video-container9 {
+    position: absolute;
+    top: 60vw;
+    left: 5vw;
+}
+
+.video-container10 {
+    position: absolute;
+    top: 14vw;
+    left: 6vw;
+}
+
+.video-container11 {
+    position: absolute;
+    top: 55vw;
+    left: 40vw;
+}
+
+.video-container12 {
+    position: absolute;
+    top: 12vw;
+    left: 65vw;
+}
+
+.video-container13 {
+    position: absolute;
+    top: 32vw;
+    left: 37vw;
+}
+
+
+.video-container15 {
+    position: absolute;
+    top: 25vw;
+    left: 17vw;
+}
+
+
+.letter, .partyhat, .play {
+    width: 10vw;
+}
+
+.partyhorn, .baloons, .present,
+.candy, .wavy, .glasses, .micro, 
+.soundballs {
+    width: 12vw;
+}
+
+.yay, .logo, .draw {
+    width: 14vw;
+}
+
+.soundwave {
+    width: 16vw;
+}
+
+.record {
+    left: 2.5vw;
+} 
+
+.leftamessage{
+    top: 8.2vw;
+    right: 2vw;
+} 
+
+.drawposter {
+    right: 3.5vw;
+}
+
+}
+

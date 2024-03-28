@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voicium</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" type="image/svg" href="./assets/voicium-logo.svg">
+</head>
+
+<body>
+
+<img class="hidden-image" src="./assets/image.svg">
+
+<!-- первая страница с иконками -->
+
+    <section class="pageFirst">
+
+        <div class="video-container1">
+            <video class="soundballs" id="video1" src="./assets/soundballs.mp4"></video>
+        </div>
+
+        <div class="video-container2">
+            <video class="baloons" id="video2" src="./assets/baloons.mp4"></video>
+        </div>
+
+        <div class="video-container3">
+            <video class="candy" id="video3" src="./assets/candy.mp4"></video>
+        </div>
+
+        <div class="video-container4">
+            <video class="draw" id="video4" src="./assets/draw.mp4"></video>
+            <p class="drawposter">нарисуй постер</p>
+        </div>
+
+        <div class="video-container5">
+            <video class="glasses" id="video5" src="./assets/glasses.mp4"></video>
+        </div>
+
+        <div class="video-container6">
+            <video class="logo" id="video6" src="./assets/logo.mp4"></video>
+        </div>
+
+        <div class="video-container7">
+            <video class="letter" id="video7" src="./assets/letter.mp4"></video>
+            <p class="leftamessage">оставь нам <br/>пожелание</p>
+        </div>
+
+        <div class="video-container8">
+            <video class="micro" id="video8" src="./assets/micro.mp4"></video>
+            <p class="record">запиши голос</p>
+        </div>
+
+        <div class="video-container9">
+            <video class="partyhat" id="video9" src="./assets/partyhat.mp4"></video>
+        </div>
+
+        <div class="video-container10">
+            <video class="partyhorn" id="video10" src="./assets/party_horn.mp4"></video>
+        </div>
+
+        <div class="video-container11">
+            <video class="play" id="video11" src="./assets/playbutton.mp4"></video>
+        </div>
+
+        <div class="video-container12">
+            <video class="present" id="video12" src="./assets/presentbox.mp4"></video>
+        </div>
+
+        <div class="video-container13">
+            <video class="soundwave" id="video13" src="./assets/soundwave.mp4"></video>
+        </div>
+
+        <div class="video-container14">
+            <video class="wavy" id="video14" src="./assets/waves.mp4"></video>
+        </div>
+
+        <div class="video-container15">
+            <video class="yay" id="video15" src="./assets/yay.mp4"></video>
+        </div>
+
+        <div id="notification" class="notification">
+            <p id="notification-text" class="notification-text">Ура! Ты получаешь скидку 25% <br/>на запись голоса.</p>
+            <button id="close-button" class="close-button">Супер!</button>
+        </div>
+
+    </section>
+
+<!--страница рисования -->
+
+    <section class="pageDraw">
+
+        <h1>нарисуй постер</h1>
+
+        <div class="info">i</div>
+
+        <div class="infoText">используй кружочки, кисточку
+        и ластик, <br>чтобы создать уникальный постер!</div>
+   
+        <div class="balls"> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-medium"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-big"></div> 
+            <div class="ball ball-huge"></div> 
+            <div class="ball ball-huge"></div> 
+            <div class="ball ball-huge"></div> 
+            <div class="ball ball-huge"></div> 
+        </div>
+    
+        <div class="color" id="color">
+            <input type="color" id="brush-color" value="#000000">
+            <img class="brush" src="./assets/brush.svg">
+        </div>
+
+        <div class="easerr" id="easerr">
+            <img class="easer" src="./assets/rubber.svg">
+        </div>
+
+      <canvas class="drawhere" id="drawhere"></canvas>
+
+        <div id="nextbutton" class="nextbutton">
+            <img class="next" src="./assets/next.svg">
+        </div>
+
+        <button class="clear">сбросить</button>
+    
+        <input type="range" id="line-width" min="1" max="20" value="2" orient="vertical">
+    
+    </section>
+
+<!--страница записи голоса -->
+    
+    <section class="pageRecord">
+    
+        <h2>запиши голос</h2>
+
+        <div class="microoo" id="startrecord">
+            <img class="micro-icon" src="./assets/micro_icon.svg">
+        </div>
+
+        <img class="wave1" src="./assets/wave1left.svg">
+        <img class="wave2" src="./assets/wave2left.svg">
+        <img class="wave3" src="./assets/wave3left.svg">
+
+        <img class="wave1r" src="./assets/wave1right.svg">
+        <img class="wave2r" src="./assets/wave2right.svg">
+        <img class="wave3r" src="./assets/wave3right.svg">
+
+        <span class="counter" id="counter">00:00:00</span>
+
+        <div id="nextbutton2" class="nextbutton2">
+            <img class="next2" src="./assets/next.svg">
+        </div>
+        
+    </section>
+
+<!--страница прослушивания записи -->
+    
+    <section class="pageListen">
+
+        <h3>прослушай свою запись</h3>
+
+        <div class="audio-controls">
+            <audio id="audioPlayer"></audio>
+            <div class="progress-bar-container">
+                <progress class="progress-bar" id="progressBar"></progress>
+            </div>
+            <button class="playa">
+                <img class="miniplay" src="./assets/miniplay.svg">
+            </button>
+        </div>
+
+        <div id="nextButton3" class="nextButton3">
+            <img class="next3" src="./assets/next.svg">
+        </div>
+
+    </section>
+
+<!--страница написания пожелания -->
+    
+    <section class="pageWrite">
+
+        <h4>оставь нам пожелание</h4>
+
+        <textarea id="writehere" class="textarea" rows="30" cols="10"></textarea>
+        
+        <button class="saveText" id="saveText">отправить</button>
+
+        <div class="notification2" id="notification2">
+            <h5>пожелание отправлено, <br>спасибо!</h5>
+        </div>
+
+    </section>
+
+<!-- если экран перевёрнут -->
+
+    <div class="rotatee">
+        <img src="assets/image.svg" class="rotatee">
+      </div>
+
+<script src="/javascripts/main.js"></script>
+</body>
+</html>

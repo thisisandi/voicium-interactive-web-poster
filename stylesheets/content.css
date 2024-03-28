@@ -1,0 +1,826 @@
+html {
+    cursor: url('/assets/cursor.svg'), auto;
+    background-color: #000000;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden-image {
+    display: none; 
+}
+/* первая страница с иконками */
+
+.pageFirst {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #000000; 
+}
+
+.video-container1 {
+    position: absolute;
+    top: 33vw;
+    left: 80vw;
+}
+
+.video-container2 {
+    position: absolute;
+    top: 1vw;
+    left: 45vw;
+}
+
+.video-container3 {
+    position: absolute;
+    top: 15vw;
+    left: 50vw;
+}
+
+.video-container4 {
+    position: absolute;
+    top: 1vw;
+    left: 25vw;
+}
+
+.video-container5 {
+    position: absolute;
+    top: 33vw;
+    left: 5vw;
+}
+
+.video-container6 {
+    position: absolute;
+    top: 16vw;
+    left: 72vw;
+}
+
+.drawposter {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1vw;
+    white-space: nowrap;
+    position: absolute;
+    right: 2vw;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0.2vw) rotate(4deg);
+    }
+    50% {
+        transform: translateY(0.2vw) rotate(-4deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.video-container7 {
+    position: absolute;
+    top: 33vw;
+    left: 29vw;
+}
+
+.leftamessage {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1vw;
+    position: absolute;
+    top: 7vw;
+    right: 1vw;
+    animation: float2 3s ease-in-out infinite;
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0.2vw) rotate(-4deg);
+    }
+    50% {
+        transform: translateY(0.2vw) rotate(4deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.video-container8 {
+    position: absolute;
+    top: 30vw;
+    left: 60vw;
+}
+
+.record {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1vw;
+    position: absolute;
+    left: 1.5vw;
+    animation: float 3s ease-in-out infinite;
+}
+
+.video-container9 {
+    position: absolute;
+    top: 43vw;
+    left: 5vw;
+}
+
+.video-container10 {
+    position: absolute;
+    top: 10vw;
+    left: 5vw;
+}
+
+.video-container11 {
+    position: absolute;
+    top: 40vw;
+    left: 45vw;
+}
+
+.video-container12 {
+    position: absolute;
+    top: 7vw;
+    left: 62vw;
+}
+
+.video-container13 {
+    position: absolute;
+    top: 20vw;
+    left: 33vw;
+}
+
+.video-container14 {
+    position: absolute;
+    top: 8vw;
+    left: 85vw;
+}
+
+.video-container15 {
+    position: absolute;
+    top: 20vw;
+    left: 17vw;
+}
+
+.letter, .partyhat, .play {
+    width: 8vw;
+}
+
+.partyhorn, .baloons, .present,
+.candy, .wavy, .glasses, .micro, 
+.soundballs {
+    width: 10vw;
+}
+
+.yay, .logo, .draw {
+    width: 12vw;
+}
+
+.soundwave {
+    width: 14vw;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 0.1vw solid white;
+    padding: 1vw;
+    border-radius: 1vw;
+    z-index: 9999;
+    text-align: center;
+    max-width: 20vw; 
+}
+
+.notification-text {
+    text-align: center;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 1vw;
+}
+
+.close-button {
+    background-color: white;
+    color: black;
+    padding: 0.3vw 0.5vw;
+    text-align: center;
+    font-family: 'Montserrat';
+    border: none;
+    border-radius: 1vw;
+    margin-top: 0.5vw;
+    width: 5vw;
+    cursor: url('/assets/cursor.svg'), auto;
+}
+
+.confetti {
+    position: absolute;
+    width: 1vw;
+    height: 0.3vw;
+    border-radius: 30%;
+    z-index: 1;
+    opacity: 0; 
+    animation: fall 5s linear infinite; /* Уменьшаем время анимации до 10 секунд */
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-20vw) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vw) rotate(360deg);
+    }
+}
+
+/* страница рисования */
+
+.pageDraw {
+    display: none;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    white-space: nowrap;
+}
+
+.info {
+    font-family: 'Montserrat';
+    font-size: 2vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    margin-top: 3.2vw;
+    margin-left: auto; 
+    margin-right: 3vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vw solid white;
+    max-width: 100%;
+}
+
+.infoText {
+    font-family: 'Montserrat';
+    opacity: 0;
+    font-size: 1vw;
+    position: absolute;
+    margin-top: 6.2vw;
+    margin-left: 73vw;
+    background-color: black;
+    border: 0.1vw solid white;
+    color: white;
+    padding: 0.3vw;
+    border-radius: 0.5vw;
+    display: none;
+}
+
+.balls {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    margin-top: 12vw; 
+    margin-left: 3vw;
+    width: 14vw;
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8vw;
+    padding: 0.3vw;
+}
+
+.ball {
+    background-color: white;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    animation: scalyy 2s ease-in-out infinite;
+}
+
+@keyframes scalyy {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ball-medium {
+    width: 2vw;
+    height: 2vw;
+}
+
+.ball-big {
+    width: 4vw;
+    height: 4vw;
+}
+
+.ball-huge {
+    width: 5vw;
+    height: 5vw;
+}
+
+.color, .easerr {
+    display: flex;
+    position: absolute;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 5vw;
+    padding: 0.2vw;
+}
+
+.color {
+    margin-top: 44vw;
+    margin-left: 3vw;
+    overflow: hidden;
+}
+
+.easerr {
+    margin-top: 44vw;
+    margin-left: 12vw;
+}
+
+.brush, .easer {
+    width: 4vw;
+    height: 5vw;
+    z-index: 2;
+}
+
+.drawhere {
+    box-sizing: border-box;
+    width: 50vw;
+    height: 37.4vw;
+    position: absolute;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    top: 12vw; 
+    left: 25vw;
+}
+
+
+.nextbutton {
+    margin-top: 47vw;
+    margin-left: 94.5vw;  
+    position: absolute;
+    border: 0.1vw solid white;
+    width: 3vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 3vw;
+    border-radius: 50%;
+}
+
+.next {
+    margin-left: 0.3vw; 
+    width: 2vw;
+    height: 2vw;
+}
+
+.clear {
+    border: 0.1vw solid white;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 1vw;
+    color: white;
+    background-color: black;
+    margin-top: 3.6vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    margin-left: 82vw;
+    width: 8vw;
+}
+
+#brush-color {
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    background: none;
+    cursor: url('/assets/cursor.svg'), auto;
+    border: none;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;             /* Older versions of FF          */
+    image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+    image-rendering: -webkit-optimize-contrast; /* Safari                        */
+    image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+    image-rendering: pixelated;                 /* Chrome (41+) & Firefox (40+)   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                 */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+
+#line-width {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 38vw; 
+    height: 1vw;
+    position: absolute;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    top: 30vw;
+    left: 60vw;
+    background: black; 
+    transform: rotate(90deg);
+    cursor: url('/assets/cursor.svg'), auto;
+}
+  
+  
+#line-width::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.5vw;
+    height: 1vw;
+    background: white;
+    transform: rotate(-90deg);
+    border-radius: 1vw;
+}
+  
+  #line-width::-moz-range-thumb {
+    width: 2.5vw;
+    height: 1vw;
+    background: white;
+    transform: rotate(-90deg);
+    border-radius: 1vw;
+}
+
+/* страница записи голоса */
+
+.pageRecord {
+    display: none;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 3vw;
+    margin-top: 20vw;
+    margin-left: 37vw;
+    white-space: nowrap;
+}
+
+.microoo {
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    width: 6vw; 
+    height: 6vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 25vw;
+    margin-left: 45vw;
+    position: absolute;
+    background-color: #000000;
+}
+
+.microoo.active {
+    border: 0.1vw solid #FF006E;
+}
+
+.micro-icon {
+    width:  5vw; 
+    height: 5vw;
+}
+
+.counter {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1vw;
+    position: absolute;
+    margin-top: 32vw;
+    margin-left: 45.9vw;
+}
+
+.wave1 {
+    margin-top: 12vw;
+    margin-left: -1vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    animation: wavy1 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.wave2 {
+    margin-top: 20.5vw;
+    margin-left: -1vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    animation: wavy2 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.wave3 {
+    margin-top: 16.1vw;
+    margin-left: -1vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.wave1r {
+    margin-top: 14vw;
+    margin-left: 50vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    animation: wavy1 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.wave2r {
+    margin-top: 19vw;
+    margin-left: 50vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    animation: wavy2 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.wave3r {
+    margin-top: 18vw;
+    margin-left: 50vw;
+    width: 50vw;
+    height: 20vw;
+    position: absolute;
+    z-index: -111;
+    animation: wavy3 2s infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+@keyframes wavy1 {
+    0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-0.2vw) translateX(-0.5vw);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+}
+
+@keyframes wavy2 {
+    0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-0.3vw) translateX(0.5vw);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+}
+
+@keyframes wavy3 {
+    0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(1vw) translateX(0.5vw);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+}
+
+.nextbutton2 {
+    margin-top: 47vw;
+    margin-left: 94.5vw;  
+    position: absolute;
+    border: 0.1vw solid white;
+    width: 3vw;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    border-radius: 50%;
+    display: none;
+}
+
+.next2 {
+    margin-left: 0.6vw; 
+    margin-top: 0.5vw;
+    width: 2vw;
+    height: 2vw;
+}
+
+/* страница прослушивания записи */
+
+.pageListen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h3 {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 3vw;
+    margin-top: 20vw;
+    white-space: nowrap;
+}
+
+.playa {
+    background-color: black;
+    border: 0.1vw solid white;
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    margin-right:35vw;
+    margin-top: 1vw;
+    cursor: url('/assets/cursor.svg'), auto;
+}
+
+.miniplay {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.progress-bar-container {
+    width: 34vw;
+    height: 1vw;
+    background-color: black;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    margin-top: 1.5vw;
+    margin-left: 3vw;
+    position: absolute;
+}
+
+.progress-bar {
+    width: 3%; 
+    height: 100%; 
+    border-radius: 1vw;
+    background-color: #FF006E;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: transparent; 
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: #FF006E;
+    border-radius: 1vw;
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: #FF006E;
+    border-radius: 1vw; 
+}
+
+.smooth-transition {
+    transition: width 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.nextButton3 {
+    margin-top: 70vw;
+    margin-left: 94.5vw;  
+    position: absolute;
+    border: 0.1vw solid white;
+    width: 3vw;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    border-radius: 50%;
+    display: none;
+}
+
+.next3 {
+    margin-left: 0.6vw; 
+    margin-top: 0.5vw;
+    width: 2vw;
+    height: 2vw;
+}
+
+/* страница написания пожелания */
+
+.pageWrite {
+    display: none;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 3vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    white-space: nowrap;
+}
+
+.textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    padding: 1vw;
+    font-size: 1vw;
+    background-color: black;
+    position: absolute;
+    margin-top: 8vw;
+    margin-left: 2vw;
+    width: 75vw;
+    height: 40vw;
+    border: 0.1vw solid white;
+    background-color: black;
+    border-radius: 1vw;
+}
+
+.saveText {
+    position: absolute;
+    margin-top: 28vw;
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1vw;
+    background-color: black;
+    border: 0.1vw solid white;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    width: 10vw;
+    margin-left: 85vw;
+    display: none;
+    cursor: url('/assets/cursor.svg'), auto;
+}
+
+.notification2 {
+    background-color: black;
+    border: 0.1vw solid white;
+    width: 20vw;
+    height: 5.5vw;
+    z-index: 1111111;
+    margin-top: 25vw;
+    margin-left: 30vw;
+    position: absolute;
+    border-radius: 1vw;
+    display: none;
+}
+
+h5 {
+    font-family: 'Montserrat'; 
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1.5vw;
+}
+
+/* если экран перевёрнут */
+
+.rotatee{
+    display: none;
+  }
